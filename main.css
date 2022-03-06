@@ -1,0 +1,303 @@
+*,
+* ::before,
+* ::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Roboto Mono", monospace;
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+section {
+  padding: 3.5em 0;
+}
+
+.container {
+  width: 90%;
+  max-width: 65em;
+  margin: 0 auto;
+}
+
+.split {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media screen and (min-width: 768px) {
+  .split {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .featured__item {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 calc(33.33% - 2rem);
+            flex: 0 0 calc(33.33% - 2rem);
+  }
+}
+
+/* 
+.featured {background: rgba(225, 225, 225, 0.7);}  */
+.featured {
+  background: url(/img/pexels-dids-9656151.jpg) center/cover no-repeat fixed;
+  min-height: 100vh;
+}
+
+.featured__item {
+  display: block;
+  position: relative;
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+  -webkit-transition: -webkit-transform 0.75s ease-in-out;
+  transition: -webkit-transform 0.75s ease-in-out;
+  transition: transform 0.75s ease-in-out;
+  transition: transform 0.75s ease-in-out, -webkit-transform 0.75s ease-in-out;
+  border-radius: 50%;
+  text-decoration: none;
+  color: #333;
+  text-align: center;
+  margin-top: 5rem;
+}
+
+.featured__details {
+  display: block;
+  opacity: 0;
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+.featured__item:hover,
+.featured__item:focus {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  cursor: pointer;
+}
+
+.featured__item:hover .featured__details,
+.featured__item:focus .featured__details {
+  opacity: 1;
+}
+
+/* .featured__item:hover, .featured__details, .featured__item:focus, .featured__details {opacity: 1;} */
+.featured__img {
+  border-radius: 50%;
+}
+
+/* .featured__item::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 100% 100% 0 0;
+    border-radius: 50%;
+    background: #2193b0;
+    z-index: -1;
+} */
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  font-size: 1.125rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 0.5em 1.25em;
+  opacity: 0.85;
+  background: var(--clr-accent, blue);
+  border-radius: 0.33em;
+  -webkit-transition: 250ms ease-in-out;
+  transition: 250ms ease-in-out;
+  opacity: 250ms linear;
+  border: 0.5px solid black;
+}
+
+.orange {
+  background: #faa700;
+}
+
+.spacing > * + * {
+  margin-top: var(--spacer, 2rem);
+}
+
+.hero-paragraph,
+.btn {
+  margin: 2rem;
+}
+
+.btn:hover,
+.btn:focus {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  opacity: 0.9;
+}
+
+.header-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 2.65rem;
+}
+
+.nav__logo {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.primary-title {
+  font-size: 2.2rem;
+  /* font-size: clamp(3rem, calc(5vw + 1rem), 4.5rem); */
+  line-height: 1;
+  text-transform: uppercase;
+  color: #f1f1a3;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 3em;
+  /* line-height: 1.2; */
+  color: #17353d;
+  text-transform: capitalize;
+}
+
+.one {
+  margin-top: 1em;
+}
+
+.two {
+  margin-bottom: 1.2em;
+}
+
+.hero {
+  color: white;
+  text-align: center;
+  padding-top: 3em;
+  background: #222;
+  min-height: 100vh;
+}
+
+@supports (background-blend-mode: multiply) {
+  .hero {
+    background: url(/img/img6.jpg) center/cover no-repeat fixed, radial-gradient(#444, #111);
+    background-blend-mode: multiply;
+  }
+}
+
+.product {
+  background: radial-gradient(var(--clr-inner, limegreen), var(--clr-outer, purple));
+  padding: 3em;
+  border-radius: 1em;
+  margin-bottom: 5em;
+  text-align: center;
+}
+
+.product__title {
+  font-size: 1.8rem;
+  line-height: 1;
+  color: #080808;
+  text-transform: uppercase;
+}
+
+.product__image {
+  margin: -5rem 0 0 0;
+}
+
+@media (min-width: 45em) {
+  .product {
+    text-align: left;
+  }
+  .product__image {
+    float: right;
+    width: 65%;
+    shape-outside: url(/img/our-products/kindpng1.png);
+    shape-margin: 1em;
+  }
+}
+
+.our-product {
+  background: url(/img/pexels-gradienta-7130474.jpg) center/cover no-repeat fixed;
+}
+
+.product__title,
+.product__description {
+  margin: 0.75rem;
+}
+
+.nike-sport {
+  --clr-accent: limegreen;
+}
+
+.nike-air-max {
+  --clr-inner: pink;
+  --clr-outer: rgb(50, 121, 131);
+  --clr-accent: limegreen;
+}
+
+.nike-dunk-low-retro {
+  --clr-inner: rgb(129, 133, 125);
+  --clr-outer: rgb(66, 61, 88);
+  --clr-accent: limegreen;
+}
+
+.nike-air-zoom {
+  --clr-outer: rgb(190, 144, 74);
+  --clr-inner: rgb(114, 70, 99);
+  --clr-accent: limegreen;
+}
+
+.hoka {
+  --clr-outer: rgb(161, 223, 62);
+  --clr-inner: rgb(99, 57, 63);
+  --clr-accent: limegreen;
+}
+
+.new-balance-690-v3 {
+  --clr-outer: rgb(223, 62, 62);
+  --clr-inner: rgb(129, 133, 125);
+  --clr-accent: limegreen;
+}
+
+.nike-air-force {
+  --clr-outer: orange;
+  --clr-inner: rgb(191, 145, 145);
+  --clr-accent: limegreen;
+}
+
+.adidas-dragon {
+  --clr-inner: rgb(129, 133, 125);
+  --clr-outer: rgb(66, 61, 88);
+  --clr-accent: limegreen;
+}
+/*# sourceMappingURL=main.css.map */
