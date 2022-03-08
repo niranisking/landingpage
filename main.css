@@ -157,6 +157,8 @@ section {
   opacity: 0.9;
 }
 
+.hero { height: 100vh;}
+
 .header-nav {
   display: -webkit-box;
   display: -ms-flexbox;
