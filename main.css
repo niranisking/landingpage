@@ -66,7 +66,7 @@ section {
 /* 
 .featured {background: rgba(225, 225, 225, 0.7);}  */
 .featured {
-  background: url(/img/pexels-dids-9656151.jpg) center/cover no-repeat fixed;
+  background: url(./img/pexels-dids-9656151.jpg) center/cover no-repeat fixed;
   min-height: 100vh;
 }
 
@@ -249,7 +249,7 @@ section {
 }
 
 .our-product {
-  background: url(/img/pexels-gradienta-7130474.jpg) center/cover no-repeat fixed;
+  background: url(./img/pexels-gradienta-7130474.jpg) center/cover no-repeat fixed;
 }
 
 .product__title,
