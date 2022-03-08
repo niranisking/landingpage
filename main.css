@@ -210,7 +210,7 @@ section {
 
 @supports (background-blend-mode: multiply) {
   .hero {
-    background: url(/img/img6.jpg) center/cover no-repeat fixed, radial-gradient(#444, #111);
+    background: url(./img/img6.jpg) center/cover no-repeat fixed, radial-gradient(#444, #111);
     background-blend-mode: multiply;
   }
 }
