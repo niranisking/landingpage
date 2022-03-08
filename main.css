@@ -157,7 +157,7 @@ section {
   opacity: 0.9;
 }
 
-.hero { height: 100vh;}
+.hero { max-height: 100vh;}
 
 .header-nav {
   display: -webkit-box;
